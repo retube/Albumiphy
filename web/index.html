@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{{page.title}}</title>
+	<link rel="stylesheet" type="text/css" href="assets/albumiphy.css">
+	<link rel="shortcut icon" type="image/x-icon" href="assets/favicon.ico"/>
+	<script src="assets/vue.js" type="text/javascript"></script>
+	<script src="assets/albumiphy.js" type="text/javascript"></script>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" name="viewport">
+	<meta name="generator" content="http://www.retu.be">
+</head>
+
+<body>
+	
+	<div class="display" v-show="overlay.display" id="overlay" style="display: none;">
+		<div class="inner">
+			<div class="frame">
+				<img v-bind:src="overlay.imageSrc" v-on:load="check">
+				<span>{{overlay.imageDetails}}</span>
+			</div>
+		
+			<div id="ref"></div>
+
+			<div id="controls">
+				<ul>
+					<li><a class="button" v-on:click="prevImageSrc"><b class="action">&#12296;</b> Previous</a></li>
+					<li><a class="button" v-on:click="nextImageSrc">Next <b class="action">&#12297;</b></a></li>
+					<li><a class="button" v-on:click="close">Close <b><span class="action">&#9447;</span></b></a></li>
+				</ul>
+			</div>
+
+			<div id="spacer"></div>
+
+		</div>
+		
+	</div>
+	
+	<div class="left">
+		
+		<ul id="menu">
+			<li v-for="year in menu.images.years" class="years">
+				<a class="year" v-on:click="toggleDisplay"><img v-bind:src="expandIcon($index)"> {{ year.year }}</a>
+				<ul class="months" v-show="display($index)">
+					<li v-for="month in year.months"><a v-on:click="link($parent.$index, $index)">{{ month.month }}</a></li>
+    			</ul>
+  			</li>
+		</ul>
+
+		<div class="info"><a href="http://retu.be/Albumiphy">Albumiphy</a><br >Static Image Gallery</div>
+
+	</div>
+
+	<div id="content">
+
+		<h1>{{page.title}}</h1>
+
+		<div id="thumbnails">
+			
+			<h2>{{thumbnails.title}}</h2>
+
+			<ul>
+			<li v-for="image in thumbnails.images" v-on:click="load($index)" v-bind:style="{backgroundImage: 'url(' + thumbnails.path + image.t + ')'}">
+			</li>
+			</ul>
+		</div>
+
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,254 @@
+/*
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+*/
+
+html {
+    
+}
+
+body {
+    background-color: #fff;
+    color: #444444;
+    font: 62.5% 'Open Sans',Arial,sans-serif;
+    margin: 0;
+    padding: 0
+    text-align: left;
+}
+
+h1, h2 {
+    font-weight: normal;
+    padding-left: 5px;
+    margin: 0;
+}
+
+h1 { font-size: 3.0em; overflow: auto; }
+
+h2 {
+    font-size: 2em;
+    margin: 20px 0 10px 0;
+}
+
+ul {
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    cursor: pointer;
+}
+
+.left {
+    float: left;
+    position: fixed;
+    width: 180px;
+    margin: 0;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.85);
+}
+
+#menu {
+    font-size: 2em;
+    padding: 5px 30px 5px 15px;
+    margin: 20px 0 0 0;
+    color: #eee;
+}
+
+#menu .years {
+    padding: 5px 0 5px 0;
+}
+
+#menu .months {
+    font-size: 0.8em;
+    margin: 5px 0 5px 0;
+    padding: 0 0 0 15px;
+}
+
+#menu .months li {
+    padding: 5px 5px 5px 15px;
+    border-bottom: 1px solid #333;
+}
+
+#menu a:hover {
+    color: #4c4fff;
+}
+
+#content {
+    margin: 0px 0px 0px 200px;
+    z-index: 10;
+    padding-top: 10px;
+    position: static;
+}
+
+.bottom {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 20px;
+    background-color: #000000;
+}
+
+#thumbnails {
+    margin: 0;
+}
+
+#thumbnails li {
+    width: 180px;
+    height: 120px;
+    display: block;
+    float: left;
+    text-align: center;
+    background-color: #000;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center; 
+    margin: 5px;
+    border: 1px solid #fff;
+}
+
+#thumbnails li:hover {
+    border: 1px solid #4c4fff;
+    cursor: pointer;
+}
+
+.display {
+    z-index: 20;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.85);
+    text-align: center;
+}
+
+.inner {
+    color: #222;
+    font-size: 1.5em;
+    max-height: 100%;
+    overflow: auto;
+}
+
+.frame {
+    margin: 20px 0 0 0;
+    display: inline-block;
+    position: relative;
+    max-width: 95%;
+    background-color: #fff;
+    border: 3px solid #fff;
+    border-radius: 5px;
+    margin-bottom: 0; 
+}
+
+.frame img { display: block; max-width: 100%; max-height: 100%; margin: 0 0 0 0; }
+.frame span { line-height: 2; }
+
+#controls { 
+            border: 1px solid #555; 
+            border-radius: 5px;  
+            background-color: rgba(0,0,0,0.85); 
+            position: relative;
+            font-size: 1em;
+            padding: 10px;
+            width: 300px;
+            left: 0;
+            right: 0;
+            margin: 20px auto 0px auto;
+            bottom: 5px;
+            color: #afafaf;
+}
+
+#controls ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#controls li {
+    display: inline-block;
+    padding: 0 15px 0 15px;
+}
+
+#controls a {
+    color: #eee;
+    text-decoration: none;
+    cursor: pointer;
+
+}
+
+#controls a:hover {
+    color: #4c4fff;
+}
+
+#ref { margin: 0; }
+#spacer { height: 60px; }
+
+.action { color: #FFA500; }
+
+.year { cursor: pointer; }
+
+.info {
+    clear: both;
+    text-align: left;
+    font-size: 1.2em;
+    padding: 10px 0 15px 15px;
+}
+
+.info a {
+    color: #444444;
+    text-decoration: none;
+}
+
+.info a:hover {
+    color: #4c4fff;
+}
+
+@media only screen and (max-width: 720px) {
+    #menu {
+        padding: 5px 15px 0 10px;
+    }
+    #menu .months li {
+        padding-left: 10px;
+    }
+    .left {
+        width: 150px;
+    }
+    #content {
+        margin-left: 160px;
+    }
+    #thumbnails li {
+        width: 150px;
+        height: 100px;
+        margin: 1px 1px 1px 1px;
+    }    
+}
+
+@media only screen and (max-width: 480px) {
+    #menu {
+        padding: 5px 15px 0 5px;
+        font-size: 1.7em;
+    }
+    #menu .months {
+        padding-left: 5px;
+    }
+    #menu .months li {
+        padding-left: 5px;
+    }
+    .left {
+        width: 105px;
+    }
+    #content {
+        margin-left: 106px;
+    }
+    #thumbnails li {
+        width: 120px;
+        height: 80px;
+        margin: 1px 1px 1px 1px;
+    }
+}
+
+
+
