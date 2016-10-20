@@ -1,5 +1,7 @@
 # Albumiphy
 
+![Albumiphy screenshot](web/assets/placeit-git.png?raw=true "Albumiphy screenshot")
+
 A simple static image gallery:
 
 - Calendar layout
@@ -16,8 +18,8 @@ Albumiphy uses the timestamp encoded in exif data to arrange images by month and
 
 ## Installation
 
-- Download the tar.tz
-- `tar -xvzf albumiphy-v1.tar.gz`
+- Download ZIP above 
+- Unzip
 - Add the the `bin` directory extracted above to `$PATH` in your `.bashc`
 
 ## Create Album
