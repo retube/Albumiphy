@@ -24,9 +24,9 @@ Albumiphy uses the timestamp encoded in exif data to arrange images by month and
 
 ## Create Album
 
-`cd /path/to/images`
+`> cd /path/to/images`
 
-`$ albumiphy.py --title="Jones Family Album"`
+`> albumiphy.py --title="Jones Family Album"`
 
 Then point your web browser to:
 
