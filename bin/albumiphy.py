@@ -1,12 +1,13 @@
 #!/usr/bin/env python
 
 # **********************************************************************************
-# Creates a static image gallery for any images in a given directory
+# Creates a static image gallery for any images in a given directory (inc sub dirs)
 #  - Calendar layout
 #  - Responsive
 #  - Bookmarkable URLs
 # Author: R Hill
 # Date: 2016
+# Web: http://retu.be/albumiphy.html
 # **********************************************************************************
 
 import glob

@@ -11,6 +11,8 @@ A simple static image gallery:
 
 Albumiphy uses the timestamp encoded in exif data to arrange images by month and year. Images are scaled for the web coming in at around 50-100k each. Should support relatively large image libraries with 10k+ images.
 
+Here is an [example gallery](http://retu.be/Albumiphy)
+
 ## Requirements
 
 - Linux

@@ -1,3 +1,9 @@
+/*
+Albumiphy static image gallery
+Author: R Hill
+Web: http://retu.be/albumiphy.html
+*/
+
 var _APHY = { };
 
 _APHY.status = { 
@@ -8,6 +14,7 @@ _APHY.status = {
 		implementHash: true
 };
 
+// Increments image
 _APHY.incrementImgLoc = function() {
 
 	var is = _APHY.status.imgLoc;
@@ -29,6 +36,7 @@ _APHY.incrementImgLoc = function() {
 	};
 };
 
+// Decrements image
 _APHY.decrementImgLoc = function() {
 
 	var is = _APHY.status.imgLoc;
@@ -50,6 +58,7 @@ _APHY.decrementImgLoc = function() {
 	}	
 };
 
+// Initialise
 _APHY.init = function(obj) {
 	_APHY.images = obj;
 	document.getElementById("content").style.position = "fixed";
@@ -66,6 +75,7 @@ _APHY.init = function(obj) {
 
 	_APHY.getJSON("json/values.json", function(obj) {
 		_APHY.globalVue.page = obj;
+		document.getElementsByTagName("title")[0].innerHTML = obj.title;
 	});
 };
 
@@ -96,6 +106,7 @@ _APHY.getImagePath = function() {
 				_APHY.images.years[year].months[month].month;
 };
 
+// Set up the Vue
 _APHY.initVue = function() {
 
 	var data = { };
@@ -275,6 +286,7 @@ _APHY.getJSON = function(url, callback) {
 	request.send();
 };
 
+// Extract fragment from URL
 _APHY.getFragment = function() {
 	var frag = window.location.hash;
 	if (frag != null && frag.length > 0) {
@@ -284,6 +296,7 @@ _APHY.getFragment = function() {
 	return null;
 };
 
+// Positioning of overlay control
 _APHY.checkControl = function() {
 	if (_APHY.globalVue.overlay.display) {
 		var control = document.getElementById("controls");
@@ -296,6 +309,7 @@ _APHY.checkControl = function() {
 	};
 };
 
+// Check if element is below fold
 _APHY.isBelowFold = function(element, bottomOffset) {
 	var rect = element.getBoundingClientRect();
 	return rect.bottom + bottomOffset <= (window.innerHeight || document.documentElement.clientHeight);
@@ -309,6 +323,7 @@ _APHY.setScrollLocation = function(location) {
 	document.documentElement.scrollTop = document.body.scrollTop = location;
 };
 
+// Stops popstate listener
 _APHY.silentHashUpdate = function(hash) {
 	_APHY.status.implementHash = false;
 	window.location.hash = hash;
