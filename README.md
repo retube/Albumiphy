@@ -7,11 +7,11 @@ A simple static image gallery:
 - Calendar layout
 - Responsive
 - Bookmarkable URLs
-- Optimised for the web
+- Images scaled for web/mobile
 
-Albumiphy uses the timestamp encoded in exif data to arrange images by month and year. Images are scaled for the web coming in at around 50-100k each. Should support relatively large image libraries with 10k+ images.
+Albumiphy uses the timestamp encoded in exif data to arrange images by month and year. Images are optimised for the web coming in at around 50-100kB each. Should support relatively large image libraries with 10k+ images.
 
-Here is an [example gallery](http://retu.be/Albumiphy)
+Here is an [example gallery](http://retu.be/Albumiphy) featuring random shots of London.
 
 ## Requirements
 
@@ -28,7 +28,7 @@ Here is an [example gallery](http://retu.be/Albumiphy)
 
 `> cd /path/to/images`
 
-`> albumiphy.py --title="Jones Family Album"`
+`> albumiphy.py --title="My Super Pics"`
 
 Then point your web browser to:
 
@@ -36,7 +36,7 @@ Then point your web browser to:
 
 and voila!
 
-Copy to your favorite web server, USB stick etc at your leisure.
+Copy the `Albumiphy` folder to your favorite web server, USB stick etc at your leisure.
 
 ## Home page
 
